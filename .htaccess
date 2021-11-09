@@ -1,0 +1,157 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^jumboking.co.in$
+RewriteRule (.*) https://www.jumboking.co.in/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^404$ error.php
+RewriteRule ^404/$ error.php
+
+RewriteRule ^401$ error.php
+RewriteRule ^401/$ error.php
+
+RewriteRule ^403$ error.php
+RewriteRule ^403/$ error.php
+
+RewriteRule ^500$ error.php
+RewriteRule ^500/$ error.php
+
+RewriteRule ^profile/([a-zA-Z0-9_-]+)$ vendor-product-list.php?vid=$1
+RewriteRule ^profile/([a-zA-Z0-9_-]+)/$ vendor-product-list.php?vid=$1
+
+RewriteRule ^brand-journey$ about-us.php
+RewriteRule ^brand-journey/$ about-us.php
+
+RewriteRule ^apply-for-franchise$ own-a-jumboking-franchise.php
+RewriteRule ^apply-for-franchise/$ own-a-jumboking-franchise.php
+
+RewriteRule ^franchising-faqs$ franchising-faqs.php
+RewriteRule ^franchising-faqs/$ franchising-faqs.php
+
+RewriteRule ^jumboking-menu$ jumboking-menu.php
+RewriteRule ^jumboking-menu/$ jumboking-menu.php
+
+RewriteRule ^careers$ careers.php
+RewriteRule ^careers/$ careers.php
+
+RewriteRule ^feedback$ feedback.php
+RewriteRule ^feedback/$ feedback.php
+
+RewriteRule ^gallery$ gallery.php
+RewriteRule ^gallery/$ gallery.php
+
+RewriteRule ^head-office$ contact.php
+RewriteRule ^head-office/$ contact.php
+
+RewriteRule ^terms-and-conditions$ terms-and-conditions.php
+RewriteRule ^terms-and-conditions/$ terms-and-conditions.php
+
+RewriteRule ^online-coverage$ media.php
+RewriteRule ^online-coverage/$ media.php
+
+RewriteRule ^media/([a-zA-Z0-9_-]+)$ media.php?vid=$1
+RewriteRule ^media/([a-zA-Z0-9_-]+)/$ media.php?vid=$1
+
+RewriteRule ^media/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$ media-inner.php?catseo=$1&postseo=$2
+RewriteRule ^media/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/$ media-inner.php?catseo=$1&postseo=$2
+
+RewriteRule ^print-coverage$ print-coverage.php
+RewriteRule ^print-coverage/$ print-coverage.php
+
+RewriteRule ^store-locator$ store-locator.php
+RewriteRule ^store-locator/$ store-locator.php
+
+RewriteRule ^menu/([a-zA-Z0-9_-]+)$ jumboking-menu-product.php?vid=$1
+RewriteRule ^menu/([a-zA-Z0-9_-]+)/$ jumboking-menu-product.php?vid=$1
+
+RewriteRule ^product/([a-zA-Z0-9_-]+)$ product-description.php?vid=$1
+RewriteRule ^product/([a-zA-Z0-9_-]+)/$ product-description.php?vid=$1
+
+RewriteRule ^staff$ staff/login.php
+RewriteRule ^staff/$ staff/login.php
+
+RewriteRule ^staff/login$ staff/login.php
+RewriteRule ^staff/login/$ staff/login.php
+
+RewriteRule ^admin$ admin/login.php
+RewriteRule ^admin/$ admin/login.php
+
+RewriteRule ^admin/login$ admin/login.php
+RewriteRule ^admin/login/$ admin/login.php
+
+RewriteRule ^admin/franchisee-enquiries$ admin/apply-for-franchisee.php
+RewriteRule ^admin/franchisee-enquiries/$ admin/apply-for-franchisee.php
+
+RewriteRule ^admin/dashboard$ admin/dashboard.php
+RewriteRule ^admin/dashboard/$ admin/dashboard.php
+
+RewriteRule ^admin/top-menu$ admin/top-menu.php
+RewriteRule ^admin/top-menu/$ admin/top-menu.php
+
+RewriteRule ^admin/add-coverage$ admin/add-coverage.php
+RewriteRule ^admin/add-coverage/$ admin/add-coverage.php
+
+RewriteRule ^admin/coverage-list$ admin/coverage-list.php
+RewriteRule ^admin/coverage-list/$ admin/coverage-list.php
+
+RewriteRule ^admin/products-list$ admin/products-list.php
+RewriteRule ^admin/products-list/$ admin/products-list.php
+
+RewriteRule ^admin/product-categories$ admin/product-categories.php
+RewriteRule ^admin/product-categories/$ admin/product-categories.php
+
+RewriteRule ^admin/add-product-category$ admin/add-product-category.php
+RewriteRule ^admin/add-product-category/$ admin/add-product-category.php
+
+RewriteRule ^admin/add-top-menu$ admin/add-top-menu.php
+RewriteRule ^admin/add-top-menu/$ admin/add-top-menu.php
+
+RewriteRule ^admin/add-product$ admin/add-product.php
+RewriteRule ^admin/add-product/$ admin/add-product.php
+
+RewriteRule ^admin/add-top-submenu$ admin/add-top-submenu.php
+RewriteRule ^admin/add-top-submenu/$ admin/add-top-submenu.php
+
+RewriteRule ^admin/career-messages$ admin/all-career-messages.php
+RewriteRule ^admin/career-messages/$ admin/all-career-messages.php
+
+RewriteRule ^admin/contact-messages$ admin/all-contact-messages.php
+RewriteRule ^admin/contact-messages/$ admin/all-contact-messages.php
+
+RewriteRule ^staff/dashboard$ staff/dashboard.php
+RewriteRule ^staff/dashboard/$ staff/dashboard.php
+
+RewriteRule ^send-otp$ sendotp.php
+RewriteRule ^send-otp/$ sendotp.php
+
+RewriteRule ^verify-otp$ verifyotp.php
+RewriteRule ^verify-otp/$ verifyotp.php
+
+RewriteRule ^action/get-cities$ includes/common/getcities.php
+RewriteRule ^action/get-cities/$ includes/common/getcities.php
+
+RewriteRule ^action/get-sub-city$ includes/common/sub-city.php
+RewriteRule ^action/get-sub-city/$ includes/common/sub-city.php
+
+RewriteRule ^staff/faqs$ staff/faqs.php
+RewriteRule ^staff/faqs/$ staff/faqs.php
+
+RewriteRule ^staff/policy$ staff/terms-policy.php
+RewriteRule ^staff/policy/$ staff/terms-policy.php
+
+RewriteRule ^staff/logout$ staff/logout.php
+RewriteRule ^staff/logout/$ staff/logout.php
+
+RewriteRule ^admin/logout$ admin/logout.php
+RewriteRule ^admin/logout/$ admin/logout.php
+
+RewriteRule ^staff/training-videos$ staff/training-videos.php
+RewriteRule ^staff/training-videos/$ staff/training-videos.php
+
+RewriteRule ^staff/training-photos$ staff/training-photos.php
+RewriteRule ^staff/training-photos/$ staff/training-photos.php
+
+ErrorDocument 404 /file-not-found.html
+
+
